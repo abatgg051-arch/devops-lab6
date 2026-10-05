@@ -1,0 +1,21 @@
+name: Hello World
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Say hello
+        run: echo "Hello from Abat"
+
+      - name: Show OS info
+        run: uname -a
+
+      - name: Show date
+        run: date
